@@ -29,28 +29,13 @@ const mario = document.querySelector('.mario');
                 pipe.style.animation = 'none';
                 pipe.style.bottom = `${marioPosition}px`;
 
-                mario.src = './Images/Mbx.gif';
+                mario.src = './images/pixil-frame-0.png';
                 mario.style.width = '180px';
                 mario.style.marginLeft = '-10px';
+
                 clearInterval(loop);
-
-                cotatiner.style.opacity = 1.0;
-
             }
 
         }, 10);
 
         document.addEventListener('keydown', jump);
-
-        let cotatiner = document.querySelector('.container');
-        let botao = document.querySelector('#butao');
-
-        botao.addEventListener("click", function e(p) {
-            window.location.href = 'index.html';
-        });
-
-        let botao1 = document.querySelector('#butao1');
-
-        botao1.addEventListener("click", function e(p) {
-            window.location.href = '../index.html';
-        });
