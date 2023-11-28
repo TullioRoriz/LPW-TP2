@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1990px;
+    height: 800px;
+    background-image: url(./Mario/ba.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main {
+    background-color: rgb(7, 7, 7);
+    box-shadow: 0 8px 32px 0 rgb(153, 139, 214);
+    backdrop-filter: blur(50px);
+    border: rgb(80, 79, 79);
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+main a {
+    color: white;
+    display: inline-flex;
+    line-height: 2.5;
+    transition: 150ms ease-out;
+    text-transform: capitalize;
+}
+
+main li {
+    display: table-cell;
+    text-align: center;
+    transition: 150ms ease-out;
+    width: 15%;
+    position: relative;
+}
+
+main li:first-of-type {
+    border-left: none;
+}
+
+main li::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: .1s;
+    width: 0;
+    height: 0;
+}
+
+main li:hover::before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(139, 145, 219);
+}
+
+main li:hover a {
+    color: #000000;
+    transform: translateY(-0.125em);
+}
+
+main ul {
+    display: table;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 50px;
+    font-family: fantasy;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50%;
+    opacity: 50%;
+}
+button:hover{
+    transition: 500ms;
+    opacity: 100%;
+}
+
+
+
+@media (max-width:700px){
+    main li {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        background: none;
+    }
+    main li:hover::before{
+        left: 0;
+        top: 0;
+        background: rgb(0, 0, 0) ;
+    }
+}
+@media (max-width:1920px){
+        .planetas {
+            scale: 1.0;
+        }
+}
+@media (max-width:1660px) and (min-width:1001px){
+    .planetas img{
+        scale: 0.8;
+        width: 50px;
+        display: inline-block;
+    }
+
+}
+@media (max-width:1000px){
+    .planetas a{
+        display:flex ;
+        margin-left: auto;
+        margin-right: auto;
+        scale: 1.0;
+    }
+    a img:hover{
+        scale: 1.1;
+    }
+}

@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 965px;
+    border-bottom: 210px solid rgb(70, 54, 28);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(./Mario/Images/backgoudgame.png);
+    background: linear-gradient( rgb(5, 5, 5), rgb(47, 31, 62));
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.back {
+    background-repeat: no-repeat;
+    height: 755px;
+    width: 1950px;
+}
+.clouds {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 15s infinite linear;
+}
+
+
+@keyframes pipe-animation{
+    from{
+
+        right: -80px;
+
+    }
+
+    to{
+
+        right: 100%;
+
+    }
+}
+
+@keyframes jump{
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+
+#jumpCounter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+
+    font-size: 40px;
+    font-family: fantasy;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px; 
+    background-color: rgba(52, 97, 219, 0.7); 
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    border: solid rgb(148, 14, 14) 5px;
+    position: flex;
+}
+
+#butao {
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(148, 14, 14);
+    padding: 20px 40px; 
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px; 
+} 
+
+#butao1 {
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(148, 14, 14);
+    padding: 20px 40px; 
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px; 
+} 
